@@ -53,6 +53,6 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
     flex-direction: row; /* column reverser row*/
     justify-content: center;
     align-items: center;
-    align-self: baseline;
+    align-self: flex-end;
     
 }
