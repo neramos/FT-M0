@@ -15,13 +15,15 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 /* Acá va tu código */
 
 #ejercicioDos{
-    display: none;
-}
+    display: none; /* No deja el espacio ocupado */
+    /*visibility:hidden --> DEJA EL ESPACIO OCUPADO*/
+    }
+
 /* Ejercicio 3: */
 
 /* Acá va tu código */
 #ejercicioTres{
-    position: relative;
+    position: absolute; /*tambien puede ser relative*/
     top: 100px;
     left: 200px;
 }
@@ -30,20 +32,21 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 /* Acá va tu código */
 #ejercicioCuatro{
    /* position: absolute;*/
-   position: fixed;
-    top:0;
-    left:0;
+    position: fixed;
+    top:0px;
+    left:0px;
 }
 /* Ejercicio 5: */
 
 /* Acá va tu código */
 #ejercicioCinco{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: end;
+    flex-direction: row-reverse;
+    justify-content: space-around;    /* align-items: center; */
+    
 }
 /* Ejercicio 6. */
+/* row reverse*/
 
 /* Ejercicio 7: */
 
