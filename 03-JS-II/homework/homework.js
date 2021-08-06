@@ -64,7 +64,7 @@ herramientas necesarias para resolver los distintos problemas que nos enfrentamo
 aprender a realizar estas búsquedas en internet es uno de los skill más importantes que puedes 
 adquirir!
 En tu buscador basta con simplemente escribir "switch Javascript" y listo. Éxitos!
-// 
+*/
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
@@ -73,7 +73,7 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-  */
+  
   switch(color){
     case 'blue':
       return "This is blue";
@@ -112,12 +112,13 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  /*
+  
   if (numero-Math.floor(numero)===0){
       return true;
   } return false;
-  */
- return numero%1 ===0
+  
+ // return numero%1 ===0
+ 
 } 
 
 function fizzBuzz(numero) {
@@ -201,7 +202,8 @@ function doWhile(numero) {
   numero=numero+5;
   i=i+1;}
   while (i<8)
-} return numero;
+return numero;
+}
 
 // No modificar nada debajo de esta línea
 // --------------------------------
