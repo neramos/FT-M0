@@ -117,7 +117,7 @@ function esEntero(numero) {
       return true;
   } return false;
   
- // return numero%1 ===0
+ // return numero%1 ===0 
  
 } 
 
