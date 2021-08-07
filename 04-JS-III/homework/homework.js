@@ -243,7 +243,7 @@ function breakStatement(numero) {
         if (suma===i ) break;
       else {
         nuevoArray.push(suma)
-    }
+    } 
    }
 if(i<10){
     return 'Se interrumpió la ejecución'
