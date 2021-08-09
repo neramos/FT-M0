@@ -4,7 +4,7 @@ function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
   return array[0];
-
+// alternativa return array.shift()
 }
 
 
@@ -12,7 +12,8 @@ function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
   return array[array.length-1];
-
+  // return array.pop()
+ 
 }
 
 
@@ -31,6 +32,7 @@ function incrementarPorUno(array) {
 var nuevoArray=[];
 for(var i=0;i<array.length;i++){
   nuevoArray[i]=array[i]+1;
+  // array[i]=array[i]+1 alternativa.
 }
 return nuevoArray;
 }
@@ -64,9 +66,13 @@ function dePalabrasAFrase(palabras) {
   // Tu código:
 /*
 
-var arreglo='';
+var arreglo="";
 for (var i=0; i<palabras.length;i++){
-    arreglo= arreglo + " "+ palabras[i];
+  if i===palabras.legth-1 {  
+  arreglo= arreglo + palabras[i];
+} else {
+  arreglo= arreglo + palabras[i] + " ";
+}
 }
 return (arreglo);
 */
@@ -86,6 +92,8 @@ for (var i=0;i<array.length;i++){
     }
 }return false;
 }
+// alternativa
+// return array.includes(elemento)
 
 
 function agregarNumeros(numeros) {
@@ -118,17 +126,30 @@ function numeroMasGrande(numeros) {
 
 return Math.max.apply(null, numeros);        
 }
+// Alternativa
+/* 
+  var maximo=numeros[0];
+  for (var i=1; i<numeros.length;i++){
+    if(numeros[i]>maximo){
+      maximo = numeros[i]
+    }
+  }
+  return maximo;
+
+
+
+*/
 
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  let arrayTableDel16=[]
+  var arrayTableDel6=[]
     for (var i=0; i<11;i++) {
-     arrayTableDel16.push(6*i);
+     arrayTableDel6.push(6*i);
   }
-  return arrayTableDel16;
+  return arrayTableDel6;
 }
 
 function multiplicarArgumentos() {
@@ -138,12 +159,18 @@ function multiplicarArgumentos() {
   if (arguments.length < 1) {                     // si la longitud de argumens es menor a 1:
     return 0;                                   // se retorna 0
 }
-var total = 1;
+var total = 1; 
 for (var i = 0; i < arguments.length; i++) {
     total = total * arguments[i]
 }
 return total;
 }
+/* Alternativa
+if(arguments.length===0)
+return 0;
+if (arguments===1)
+return arguments[0];
+*/
 
 
 function cuentoElementos(arreglo){
@@ -152,7 +179,7 @@ function cuentoElementos(arreglo){
   var j=0;
   for (var i=0;i<arreglo.length;i++)  {
     if (arreglo[i]>18){
-        j=j+1
+        j=j+1 //j++;
     }  
   }
   return j;
@@ -180,18 +207,36 @@ function empiezaConNueve(n) {
   }
   return false  
 }
+/* alternativa
+if(n.toString()==="9"){
+    return true
+}
+return true
+*/
 
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  for(var i=0;i<arreglo.length;i++)
+  for(var i=1;i<arreglo.length;i++)
   if(arreglo[i]===arreglo[i-1]){
     return true;
   } return false;
 } 
+/* Alternativa
+var contador=0
+for (var i=1;i<arreglo.length;i++){
+  if(arreglo[i-1]!===arreglo[i])
+  cont++
+}
+} if (cont>0)  {
+  return false
+}
+return true;
 
+
+*/
 
 function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
@@ -227,7 +272,7 @@ for (var i=0;i<array.length;i++){
 return nuevoArray;    
 }
 
-/*
+
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
@@ -239,7 +284,7 @@ function breakStatement(numero) {
   var nuevoArray=[];
   var suma=numero;
   for (var i=0; i<10;i++){
-        suma=suma+2;
+        suma=suma+2; // numero = numero+2
         if (suma===i ) break;
       else {
         nuevoArray.push(suma)
@@ -252,7 +297,7 @@ else {
   return nuevoArray;
 } 
 }
-*/
+
 
 
 function breakStatement(numero) {
