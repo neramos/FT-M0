@@ -187,7 +187,7 @@ Cuando estamos dentro de una función, el valor de `this` va a depender de _cóm
 > f1() === window;
 < true
 
-> window.fi() === window;
+> window.f1() === window;
 < true
 ```
 
@@ -197,7 +197,7 @@ En este ejemplo la función es invocada por el objeto global por lo tanto this h
 
 * ##### Como método de un objeto
 
-Cuando usamos el _keyword_ `this` dentro de una función que es un método de un objeto, `this` toma hace referencia al objeto sobre el cual se llamó el método:
+Cuando usamos el _keyword_ `this` dentro de una función que es un método de un objeto, `this` hace referencia al objeto sobre el cual se llamó el método:
 
 ``` javascript
 > var o = {
