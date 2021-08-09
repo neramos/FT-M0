@@ -103,7 +103,7 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Devuelve el objeto
   // Tu código:
   
-  usuario.Password=nuevaPassword
+  usuario.password=nuevaPassword
 
   return usuario;
 
@@ -162,10 +162,18 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
 
-  
+descuento=0;
 producto.calcularPrecioDescuento = function() {
-  return this.precio-(this.precio*this.porcentajeDscuento);
-}
+  descuento=this.precio-(this.precio*this.porcentajeDeDescuento);
+  return descuento;
+} 
+
+
+/*  
+producto.calcularPrecioDescuento = function() {
+   return this.precio-(this.precio*this.porcentajeDeDescuento);
+   
+}*/ 
 /* Lo de arriba es decir el this es lo mismo que escribir con el this accedo a calcularPrecioDescuento
 producto.calcularPrecioDescuento = function() {
   return calcularPrecioDescuento.precio-(calcularPrecioDescuento.precio*calcularPrecioDescuento.porcentajeDscuento);
