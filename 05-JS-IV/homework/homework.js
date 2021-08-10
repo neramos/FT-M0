@@ -43,6 +43,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
 producto = objetoMisterioso.numeroMisterioso*5
 
 // alternativa producto = objetoMisterioso["numeroMisterioso"]*5
+// porque conozco la propiedD que tengo que acceder
 return producto
 
 }
@@ -76,7 +77,14 @@ function tieneEmail(usuario) {
   // De lo contratio, devuelve "false"
   // Tu código:
 
- return usuario.hasOwnProperty("email");
+ // pseudo true
+  if (usuario.email) return true
+return false;
+
+
+
+
+
 }
 
 
