@@ -104,13 +104,17 @@ function verificarPassword(usuario, password) {
   // De lo contrario, devuelve "false"
   // Tu código:
   return usuario['password'] === password;
+// if (usario.passwords === password) return true
+// return false; 
 }
+
 
 function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
-  
+  console.log("sOY EL USUARIO", usuario)
+ // para saber el nombre de propiedad (password)
   usuario.password=nuevaPassword
 
   return usuario;
@@ -175,7 +179,7 @@ producto.calcularPrecioDescuento = function() {
   descuento=this.precio-(this.precio*this.porcentajeDeDescuento);
   return descuento;
 } 
-
+  return producto
 
 /*  
 producto.calcularPrecioDescuento = function() {
