@@ -64,6 +64,17 @@ function agregarStringInvertida() {
   }
 }
 
+/* Alternativa
+String.prototype.reverse = function ()
+  { return this.split("").reverse().join("");
+}
+}
+
+
+
+*/
+
+
 // ---------------------------------------------------------------------------//
   //Crea el constructor de la clase "Persona"
   //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
