@@ -29,8 +29,11 @@ class Usuario {
     this.nombre=opciones.nombre,
     this.email=opciones.email,
     this.passwords=opciones.passwords
-    this.saludar=function(){
+    this.saludar=function(){ --> esta devuelve cada vez que se instancia
       return 'Hola mi nombre es '+ this.nombre
+    }
+    saludar(){
+      return "Hola mi nombre es " + this.nombre
     }
   }
 }
@@ -69,8 +72,14 @@ String.prototype.reverse = function ()
   { return this.split("").reverse().join("");
 }
 }
-
-
+otra alternativa
+var arr=this.split("")
+var arr2=[]
+for (var i=arr.length-1;i >=0;i--){
+  arr2=push(arr[i])
+}
+return arr2.join("")
+}
 
 */
 
@@ -103,7 +112,28 @@ String.prototype.reverse = function ()
       }
     }
 }
+/*
+  alternativa
+  class Persona {
+    constructor(nombre, apellido,edad,domicilio/*Escribir los argumentos que recibe el constructor) {
+      // Crea el constructor:
+      this.nombre=nombre,
+      this.apellido=apellido,
+      this.edad=edad,
+      this.domicilio=domicilio
 
+    } OJO VA FUERA DEL CONSTRUCTOR
+    detalle(){
+      return {
+        Nombre: this.nombre,
+         Apellido: this.apellido,
+         Edad: this.edad,
+         Domicilio: this.domicili
+       }
+    }
+
+
+*/
 
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
@@ -113,6 +143,12 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
 var nuevaPersona = new Persona("Juan", "Perez", 22, "Saavedra 123")
 return nuevaPersona;
 }
+
+/* ALTERNATIVA
+
+return new Persona(nombre, apellido, edad,dir)
+
+*/
   
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
