@@ -12,6 +12,10 @@ function mayuscula(nombre) {
 /* 
 Alternativa 
 return nombre[0].toUpperCase() + nombre.slice(1);
+Alternativa2
+var arr = nombre.split
+arr[0]=arr[0].toUpperCase()
+return arr.join("")
 */
  
 
@@ -38,7 +42,7 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  /*
+  /*                reduce espera un callback
   var sumaReduce = numeros.reduce(function(acumulador, elementos){
       return acumulador + elementos;
     },0)
@@ -50,37 +54,51 @@ function sumarArray(numeros, cb) {
     });
   cb(suma);
   }
+
+
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
-   /*
-   array.forEach(function(elemento){
-     // cb(elemento)  
-    */
-    // for (var i = 0; i < array.length; i++) {
-    //  cb (array[i]);
-
-    array.forEach(function (elemento) {
-      cb(elemento);
-  })
+  // Alternativas
+  // for (var i = 0; i < array.length; i++) {
+  //  cb (array[i]);
+  // 
+  //  array.forEach(function (elemento) {
+  //    cb(elemento);
+  //   })
+  array.forEach(cb)
 }
 function map(array, cb) {
   // Crea un nuevo array
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  var nuevoArray=array.map(function(elementos){
-      return cb(elementos)
-  }
- )
- return nuevoArray;
+  // Alternativa
+  // var nuevoArray=array.map(function(elementos){
+ //  return cb(elementos)
+ //  }
+// )
+ // return nuevoArray;
+
+var nuevoArray=array.map(cb)
+
+return nuevoArray;
+
+  
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+  // Altenativa
+  //var filtrados = array.filter(function(elementos){
+  //  return elementos[0]==="a"
+ // }
+// )
+//return filtrados;
+// }
   var filtrados = array.filter(function(elementos){
       return elementos.charAt(0)==="a"
   }
