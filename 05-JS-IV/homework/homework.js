@@ -40,7 +40,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-producto = objetoMisterioso.numeroMisterioso*5
+var producto = objetoMisterioso.numeroMisterioso*5
 
 // alternativa producto = objetoMisterioso["numeroMisterioso"]*5
 // porque conozco la propiedD que tengo que acceder
@@ -80,11 +80,6 @@ function tieneEmail(usuario) {
  // pseudo true
   if (usuario.email) return true
 return false;
-
-
-
-
-
 }
 
 
@@ -113,7 +108,7 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
-  console.log("sOY EL USUARIO", usuario)
+  console.log("SOY EL USUARIO", usuario)
  // para saber el nombre de propiedad (password)
   usuario.password=nuevaPassword
 
@@ -145,8 +140,6 @@ function pasarUsuarioAPremium(usuarios) {
       usuarios[i].esPremium=true;
   }
 return usuarios
-
-
 }
 
 function sumarLikesDeUsuario(usuario) {
