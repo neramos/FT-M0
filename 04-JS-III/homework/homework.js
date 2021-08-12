@@ -316,7 +316,7 @@ function breakStatement(numero) {
           return 'Se interrumpió la ejecución'
           break;}
       else {
-        nuevoArray.push(suma)
+        nuevoArray.push(suma) 
     } 
   }
 return nuevoArray;
