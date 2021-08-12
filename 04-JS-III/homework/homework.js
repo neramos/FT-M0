@@ -227,10 +227,10 @@ function todosIguales(arreglo) {
 /* Alternativa
 var contador=0
 for (var i=1;i<arreglo.length;i++){
-  if(arreglo[i-1]!===arreglo[i])
-  cont++
+  if(arreglo[i-1]!==arreglo[i])
+  contador++
 }
-} if (cont>0)  {
+} if (contador>0)  {
   return false
 }
 return true;
